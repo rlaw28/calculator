@@ -1,6 +1,6 @@
-const buttons = document.querySelectorAll('button');
+const result = document.querySelector('.result');
+const mathBtns = document.querySelectorAll('button');
 
-
- buttons.addEventlistener('click', () => {
-    console.log('clicked')
-});
+mathBtns.forEach(button => button.addEventListener('click', () => {
+   result.textContent = button.textContent;
+ }));
