@@ -1,4 +1,5 @@
 body {
+    background-color:#e6a6f7;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -9,6 +10,8 @@ button{
     font-size: 45px;
     height: 55px;
     width: 55px;
+    border-radius: 6px;
+    background-color: #fefcff;
 }
 
 .wrapper{
@@ -21,7 +24,8 @@ button{
 .content{
     display: flex;
     justify-content: end;
-    background-color: lightgrey;
+    border-radius: 3px;
+    background-color: #fefcff;
     padding: 8px;
 }
 
