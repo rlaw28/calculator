@@ -1,8 +1,11 @@
 const result = document.querySelector('.result');
 const mathBtns = document.querySelectorAll('button');
 
+let total = 0
+  
+
 mathBtns.forEach(button => button.addEventListener('click', () => {
-   result.textContent = button.textContent;
+  result.textContent = button.textContent;
  }));
 
 const operate = function ( num1, operator, num2) {
@@ -22,5 +25,5 @@ const operate = function ( num1, operator, num2) {
     return 'Error'
   }
 };
+operate();
 
-console.log(operate(3, '+', 3));
