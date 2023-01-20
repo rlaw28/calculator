@@ -2,7 +2,7 @@ const result = document.querySelector('.result');
 const mathBtns = document.querySelectorAll('button');
 
 let runningTotal = 0
-result.innerText = 0
+result.innerText = ''
 
 mathBtns.forEach(button => button.addEventListener('click', () => {
   let currentNum = button.textContent
