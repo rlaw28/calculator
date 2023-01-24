@@ -6,10 +6,15 @@ body {
     align-items: center;
 }
 
-button{
+button:hover{
+  background-color: #c7e9f0;
+}
+
+.btn{
     font-size: 45px;
     height: 55px;
     width: 55px;
+    margin: 3px;
     border-radius: 15px;
     background-color: #fefcff;
 }
