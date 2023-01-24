@@ -1,13 +1,18 @@
-const result = document.querySelector('.result');
-const mathBtns = document.querySelectorAll('button');
+const currentNum = document.querySelector('.current');
+const equal = document.querySelector('.equal');
+const number = document.querySelectorAll('.number');
+const operator = documnet.querySelectorAll('.operator');
 
-let runningTotal = 0
-result.innerText = ''
+current.innerText = ''
 
-mathBtns.forEach(button => button.addEventListener('click', () => {
-  let currentNum = button.textContent
-  result.innerText += currentNum;
-  }));
+// mathBtns.forEach(button => button.addEventListener('click', () => {
+//   let currentNum = button.textContent
+//   result.innerText += currentNum;
+// }));
+  
+// calculate.addEventListener('click', () => {
+//  operate();
+// })
 
 const operate = function ( num1, operator, num2) {
   if (operator === '+') {
