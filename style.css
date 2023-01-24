@@ -33,7 +33,9 @@ button:hover{
     height: 50px;
     width: 268px;
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
     border-radius: 3px;
     background-color: #fefcff;
     padding: 8px;
