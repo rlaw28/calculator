@@ -33,10 +33,10 @@ function handleOpertator(op) {
 }
 
 equal.addEventListener('click', function () {
-  operate();
-  previousScreen.textContent = '';
-  currentScreen.textContent = previousValue;
-});
+    operate();
+    previousScreen.textContent = '';
+    currentScreen.textContent = previousValue;
+  });
 
 clear.addEventListener('click', () => {
   previousValue = '';
@@ -62,9 +62,6 @@ const operate = function () {
   }
   else if (operator === '÷') {
    previousValue /= currentValue;
-  }
-  else {
-    return 'Please enter equation.'
   }
 
   previousValue = previousValue.toString();
