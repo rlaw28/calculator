@@ -19,11 +19,15 @@ button{
     background-color: #fefcff;
 }
 
+.current{
+    font-size: 20px;
+}
+
 .wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:#d6722b;
+    background-color: #070914;
     border: 2px solid black;
     padding: 15px;
     border-radius: 5px;
@@ -52,4 +56,20 @@ button{
 
 .section{
     margin: 8px;
+}
+
+.number{
+    background-color: lightgrey;
+}
+
+.operator{
+    background-color: gold;
+}
+
+.equal{
+ background-color: antiquewhite;
+}
+
+.clear{
+    background-color: red;
 }
