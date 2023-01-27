@@ -1,11 +1,13 @@
 const currentScreen = document.querySelector('.current');
 const previousScreen = document.querySelector('.previous');
+const clear = document.querySelector('.clear');
 const equal = document.querySelector('.equal');
 const numbers = document.querySelectorAll('.number');
 const operators = document.querySelectorAll('.operator');
 
 let currentValue = '';
 let previousValue = '';
+let op = operators;
 
 numbers.forEach((number) => number.addEventListener('click', function(e){
   handleNumber(e.target.textContent);
@@ -23,28 +25,43 @@ function handleNumber(num) {
     currentValue += num;
   }
 }
+
 function handleOpertator(op) {
   operator = op;
   previousValue = currentValue;
   currentValue = '';
 }
 
-const operate = function ( num1, operator, num2) {
-  if (operator === '+') {
-    return num1 + num2
+equal.addEventListener('click', function () {
+  operate();
+  totalValue = currentScreen.textContent;
+})
+
+
+
+
+const operate = function () {
+  previousValue = Number(previousValue);
+  currentValue = Number(currentValue);
+
+  if (op === '+') {
+    previousValue += currentValue;
   }
-  else if (operator === '-') {
-    return num1 - num2
+  else if (op === '-') {
+   previousValue -= currentValue;
   }
-  else if (operator === '*') {
-    return num1 * num2
+  else if (op === '×') {
+   previousValue *= currentValue;
   }
-  else if (operator === '/') {
-    return num1 / num2
+  else if (op === '÷') {
+   previousValue /= currentValue;
   }
   else {
-    return 'Error'
+    return 'Please enter equation.'
   }
+
+  previousValue = previousValue.toString();
+  currentValue = previousValue.toString();
 };
-operate();
+
 
