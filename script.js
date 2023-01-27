@@ -34,26 +34,33 @@ function handleOpertator(op) {
 
 equal.addEventListener('click', function () {
   operate();
-  totalValue = currentScreen.textContent;
+  previousScreen.textContent = '';
+  currentScreen.textContent = previousValue;
+});
+
+clear.addEventListener('click', () => {
+  previousValue = '';
+  currentValue = '';
+  operator = '';
+  currentScreen.textContent = currentValue;
+  previousValue.textContent = currentValue;
 })
-
-
 
 
 const operate = function () {
   previousValue = Number(previousValue);
   currentValue = Number(currentValue);
 
-  if (op === '+') {
+  if (operator === '+') {
     previousValue += currentValue;
   }
-  else if (op === '-') {
+  else if (operator === '-') {
    previousValue -= currentValue;
   }
-  else if (op === '×') {
+  else if (operator === '×') {
    previousValue *= currentValue;
   }
-  else if (op === '÷') {
+  else if (operator === '÷') {
    previousValue /= currentValue;
   }
   else {
