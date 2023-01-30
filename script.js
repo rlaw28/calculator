@@ -4,6 +4,7 @@ const clear = document.querySelector('.clear');
 const equal = document.querySelector('.equal');
 const numbers = document.querySelectorAll('.number');
 const operators = document.querySelectorAll('.operator');
+const decimal = document.querySelector('.decimal');
 
 let currentValue = '';
 let previousValue = '';
@@ -46,6 +47,15 @@ clear.addEventListener('click', () => {
   previousValue.textContent = currentValue;
 })
 
+decimal.addEventListener('click', function() {
+  addDecimal();
+})
+
+function addDecimal() {
+  if(!currentValue.includes('.')) {
+    currentValue += '.';
+  }
+}
 
 const operate = function () {
   previousValue = Number(previousValue);
