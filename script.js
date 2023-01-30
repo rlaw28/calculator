@@ -20,10 +20,10 @@ numbers.forEach((number) => number.addEventListener('click', function(e){
 
 
 operators.forEach((op) => op.addEventListener('click', function (e) {
-  handleOpertator(e.target.textContent);
-  previousScreen.textContent = previousValue + " " + operator;
-  currentScreen.textContent = currentValue;
-}))
+    handleOpertator(e.target.textContent);
+    previousScreen.textContent = previousValue + " " + operator;
+    currentScreen.textContent = currentValue;
+  }))
 
 
 function handleNumber(num) {
@@ -68,6 +68,15 @@ function addDecimal() {
     currentValue += '.';
   }
 }
+
+function removeNumber() {
+  currentScreen.textContent = currentScreen.textContent.slice(0, -1);
+  currentValue = currentScreen.textContent;
+}
+
+backSpace.addEventListener('click', function () {
+  removeNumber();
+})
 
 
 
