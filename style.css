@@ -15,12 +15,16 @@ button{
     height: 55px;
     width: 55px;
     margin: 3px;
-    border-radius: 15px;
-    background-color: #fefcff;
+    border-radius: 10px;
+    border-style: none;
+}
+
+.previous{
+    font-size: 20px ;
 }
 
 .current{
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .wrapper{
@@ -29,7 +33,7 @@ button{
     align-items: center;
     background-color: #070914;
     border: 2px solid black;
-    padding: 15px;
+    padding: 20px;
     border-radius: 5px;
 }
 
@@ -40,25 +44,24 @@ button{
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    border-radius: 3px;
     background-color: #fefcff;
     padding: 8px;
-}
-
-.result{
-  font-size: 37px;
-  font-weight: bold;
 }
 
 .btn-container{
     padding: 10px;
 }
 
-.section{
+.section-clear{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.section, .section-clear{
     margin: 8px;
 }
 
-.number{
+.number, .decimal{
     background-color: lightgrey;
 }
 
