@@ -1,13 +1,9 @@
 body {
-    background-color:#2189cf;
+    background-color: gray;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-button:hover{
-  background-color: #c7e9f0;
 }
 
 button{
@@ -52,27 +48,47 @@ button{
     padding: 10px;
 }
 
-.section-clear{
+.section-cb{
     display: flex;
-    justify-content: flex-end;
-}
-
-.section, .section-clear{
+    justify-content: space-around;
     margin: 8px;
 }
 
-.number, .decimal{
+.section, .section-cb{
+    margin: 8px;
+}
+
+.number, .decimal, .backspace{
     background-color: lightgrey;
 }
+
+.number:hover, .decimal:hover, .backspace:hover{
+   color: lightgray;
+   background-color: #070914;
+}
+
 
 .operator{
     background-color: gold;
 }
-
-.equal{
- background-color: antiquewhite;
+.operator:hover{
+    background-color: #070914;
+    color: gold
 }
 
+
+.equal:hover{
+  color: white;
+  background-color: #070914;
+}
+
+
+
 .clear{
+    color: white;
     background-color: red;
+}
+
+.clear:hover{
+  background-color: #070914;
 }
